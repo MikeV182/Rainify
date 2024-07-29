@@ -31,9 +31,14 @@ public class WeatherController {
             latitude = entry.getKey();
             longitude = entry.getValue();
         }
-        model.addAttribute("latitude", latitude);
-        model.addAttribute("longitude", longitude);
-        return "forecast";
+        String weather = weatherService.getWeatherByGeocode(latitude, longitude);
+        if (weather == null) {
+            model.addAttribute("status", "There will be no rain today in: " + city);
+            return "noRainPage";
+        } else {
+            model.addAttribute("description", weather);
+            return "forecast";
+        }
     }
 
 }
