@@ -7,11 +7,94 @@
 </head>
 
 <body>
-    <h1>Hope it will rain</h1><hr>
+    <h1 class="main-header">Hope it will rain</h1>
     <form method="get" action="/forecast">
-        Enter your city: <input type="text" name="city" required><br><br>
-        <input type="submit" value="Will i see the rain?">
+        <input type="text" name="city" placeholder="Enter your city" class="input-city" required><br><br>
+        <input type="submit" value="Will i see the rain?" class="input-submit">
     </form>
 </body>
 
 </html>
+
+<style>
+    html {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=3254&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .main-page-img {
+        width: 300px;
+    }
+
+    .input-submit {
+        background-color: white;
+        color: rgb(0, 153, 255);
+        border-width: 1.5px;
+        border-radius: 20px;
+        border-color: rgb(0, 153, 255);
+        border-style: solid;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 1s, 
+                    color 1s,
+                    padding-left 1s,
+                    padding-right 1s,
+                    padding-top 1s,
+                    padding-bottom 1s;
+    }
+
+    .input-submit:hover {
+        background-color: rgb(0, 153, 255);
+        color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .input-submit:active {
+        opacity: 0.6;
+    }
+
+    .main-header {
+        font-family: system-ui;
+        font-size: 35px;
+        /* color: rgb(0, 132, 221); */
+        color: white;
+        margin-bottom: 30px;
+        text-decoration: underline;
+    }
+
+    .input-city {
+        text-align: center;
+        border-radius: 10px;
+        border-width: 1.5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: solid;
+        border-color: rgb(0, 153, 255);
+        width: 50%;
+        font-size: 18px;
+        font-family: system-ui;
+        font-weight: bold;
+    }
+</style>
