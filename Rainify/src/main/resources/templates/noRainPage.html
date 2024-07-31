@@ -4,11 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Rainify</title>
+    <link rel="icon" href="https://github.com/user-attachments/assets/eb1df36e-d925-4405-a843-f2fc28c6398a">
 </head>
 
 <body>
-<h1>no rain today</h1><hr>
-<p th:text="${status}"></p>
-<a href="/"><b>HOME PAGE</b></a>
+    <h1 class="main-header">NO RAIN TODAY &#128546;</h1>
+    <p class="status-text" th:text="${status}"></p>
+    <a href="/" class="home-page">HOME PAGE</a>
 </body>
 </html>
+
+
+<style>
+    html {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url(https://plus.unsplash.com/premium_photo-1661715276689-619fb1c79d6f?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+        font-family: system-ui;
+    }
+
+    .main-header {
+        font-size: 35px;
+    }
+
+    .status-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .home-page {
+        color: rgb(0, 153, 255);
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: font-size 0.5s,
+                    text-decoration 0.5s;
+    }
+
+    .home-page:hover {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .home-page:active {
+        opacity: 0.7;
+    }
+</style>

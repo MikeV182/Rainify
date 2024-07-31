@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Rainify</title>
+    <link rel="icon" href="https://github.com/user-attachments/assets/eb1df36e-d925-4405-a843-f2fc28c6398a">
 </head>
+
 <body>
-    <h1>Cannot find the city you entered</h1><hr>
-    <h2>Try to enter it one more time</h2>
-    <a href="/"><b>HOME PAGE</b></a>
+    <h1 class="main-header">Cannot find the city you entered</h1>
+    <h2 class="secondary-header">Please, try one more time</h2>
+    <a href="/" class="home-page">HOME PAGE</a>
 </body>
 </html>
+
+
+<style>
+    html {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url(https://images.unsplash.com/photo-1601027847350-0285867c31f7?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        text-align: center;
+        font-family: system-ui;
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .main-header {
+        font-size: 35px;
+        text-decoration: underline;
+    }
+
+    .secondary-header {
+        font-size: 25px;
+    }
+
+    .home-page {
+        color: rgb(0, 153, 255);
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: font-size 0.5s,
+                    text-decoration 0.5s;
+    }
+
+    .home-page:hover {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .home-page:active {
+        opacity: 0.7;
+    }
+</style>
